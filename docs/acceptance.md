@@ -42,6 +42,8 @@ Web navigation covered the primary routes, monitor editor, node configuration, s
 
 Official `npm audit fix` resolved the desktop's reported transitive dependency advisories; the final audit reported zero known vulnerabilities. The dashboard production dependency audit also reported zero. This reflects the registry advisory data at validation time, not a security guarantee.
 
+Maintenance validation later on 2026-10-28 used Node.js 26.12.1, npm 12.2.1, Go 1.27.3 and Alpine 3.24.3. Updated Go transitive dependencies passed vet/build checks. Source deployment completed first-admin setup, served real web assets, retained login and instance identity after restart, and accepted a native node HTTP check. Clean Docker builds passed; a fresh Compose instance completed setup and authenticated API requests. The updated unprivileged node container passed ICMP and MTR with NET_RAW only. npm lockfiles were regenerated against the official registry and both reported zero known vulnerabilities. The README's document link labels were checked with GitHub's Markdown renderer.
+
 ## Explicit remaining release validation
 
 - AC-02: independently deployed nodes on genuinely different networks/regions; local fixtures do not prove geographic behavior.

@@ -20,7 +20,7 @@
 
 ## Start using Probelune
 
-1. Follow the [dashboard quick start](https://github.com/sihuangtech/probelune-dashboard#quick-start-docker-compose).
+1. Start the dashboard [from source](https://github.com/sihuangtech/probelune-dashboard#source-deployment) or with [Docker Compose](https://github.com/sihuangtech/probelune-dashboard#quick-start-docker-compose).
 2. Create and deploy [nodes](https://github.com/sihuangtech/probelune-node) on the networks you want to observe.
 3. Add HTTP/HTTPS, TCP, ICMP or DNS monitors; choose nodes and notification channels.
 4. Connect the desktop/mobile apps to that same dashboard. Complex configuration stays in the web console.
@@ -42,3 +42,14 @@ Read each project's README before installing its toolchain. The helper skips exi
 Initial validation includes real local/contained checks, browser/Electron UI, Android emulator connection, native builds and backup restoration. It does not establish real geographic coverage, production-scale SLOs, signed distribution or FCM/APNs device delivery. Screenshots show clearly labelled local fixtures.
 
 GPL-3.0-or-later. See [LICENSE](LICENSE), [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and [CHANGELOG.md](CHANGELOG.md).
+
+
+## Star History
+
+[![Star history](https://api.star-history.com/svg?repos=sihuangtech/probelune&type=Date)](https://star-history.com/#sihuangtech/probelune&Date)
+
+## Contact
+
+- Developer: [Snake Konginchrist](https://github.com/Snake-Konginchrist)
+- Email: [developer@skstudio.cn](mailto:developer@skstudio.cn)
+- Feedback: [GitHub Issues](https://github.com/sihuangtech/probelune/issues)
