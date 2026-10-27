@@ -1,0 +1,17 @@
+name: Validate project documentation
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '26'
+      - run: node scripts/check-docs.mjs
+      - name: Keep source repositories independent
+        run: |
+          test -z "$(git ls-files 'probelune-*' '.runtime/*' 'go.work*')"
+          test -z "$(git ls-files --stage | awk '$1 == 160000 {print $4}')"
