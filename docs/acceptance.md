@@ -36,6 +36,7 @@ The standalone Go builds fetched contracts from the public versioned repository 
 | AC-16 mobile workflow | Android emulator signed into the running instance, opened real history/evidence, started an immediate recheck and displayed successful responses from both nodes |
 | AC-17 desktop | Actual source Electron and packaged macOS app loaded the dashboard; renderer/IPC bridge worked and local/remote sources were labelled |
 | AC-18 webhook | Local receiver verified HMAC over timestamp/raw body; first HTTP 503 retried and the second attempt was marked sent |
+| Continuing reminders | A separate failing HTTP fixture produced exactly one one-minute reminder, carrying the stable instance identity; recovery from the real nodes then produced a recovery notification |
 
 Web navigation covered the primary routes, monitor editor, node configuration, settings/audit and notification views. No renderer page errors were observed. A 390-pixel viewport had no document-level horizontal overflow; the 1440-pixel layout was visually inspected. Mobile connected to the same running dashboard and displayed real history/evidence, not hard-coded demo data. After rebuilding/restarting the server, settings, login and overview returned the same stable instance identity; a settings update could not replace it. A final online backup completed successfully. Certificate-lifetime assertions on a plaintext HTTP response were rejected as configuration errors.
 
