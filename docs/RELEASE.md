@@ -1,6 +1,6 @@
 # Release procedure / 发布流程
 
-Each repository publishes a `v0.1.0` GitHub Release with English release notes. Desktop package numbering starts at `0.1.0` for the Probelune release line; the earlier `v1.6.0` tag is retained as history. Protocol remains v1. Current Go applications pin a contracts commit through a Go-generated pseudo-version to retain certificate-lifetime assertions without depending on the retired `v0.1.1` tag. Never move an existing published tag.
+Each repository publishes a `v0.1.0` GitHub Release with English release notes. Desktop package numbering starts at `0.1.0` for the Probelune release line; the earlier `v1.6.0` tag is retained as history. Protocol remains v1. Current Go applications use the short contracts tag `v0.1.0-compat` to retain certificate-lifetime assertions without moving the original `v0.1.0` tag or depending on a retired patch tag. Never move an existing published tag.
 
 1. Review the relevant README, GitHub Release notes, security policy and lockfile changes. Check that no real `.env`, credentials, database, node identity, private targets or generated signing material are staged.
 2. Run that repository's formatter, static checks and build. Go release builds use `GOWORK=off`. Record UI, runtime, container and device evidence separately.
