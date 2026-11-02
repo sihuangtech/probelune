@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | [probelune-dashboard](https://github.com/sihuangtech/probelune-dashboard) | Vue 网页 + Go 后端，一起部署 | 0.1.0 |
 | [probelune-node](https://github.com/sihuangtech/probelune-node) | Go 探测节点，Linux 二进制/容器 | 0.1.0 |
-| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron 本地工具与远端对照，保留旧历史 | 1.6.0 |
+| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron 本地工具与远端对照，保留旧历史 | 0.1.0 |
 | [probelune-mobile](https://github.com/sihuangtech/probelune-mobile) | Flutter Android/iOS 客户端 | 0.1.0 |
 | [probelune-contracts](https://github.com/sihuangtech/probelune-contracts) | Go 数据定义、校验和接口协议 | 0.1.1 |
 
@@ -36,8 +36,7 @@ cd probelune
 
 已验证本地/容器网络检查、浏览器与 Electron、Android 模拟器连接、原生构建及备份恢复；不将它们冒充真实跨地区覆盖、生产容量承诺、签名上架或 FCM/APNs 真机送达。截图来自明确标注的本地样例。
 
-采用 [GPL-3.0-or-later](LICENSE)，另见 [贡献](CONTRIBUTING.md)、[安全](SECURITY.md)、[更新记录](CHANGELOG.md)。
-
+采用 [GPL-3.0-or-later](LICENSE)，另见 [贡献](CONTRIBUTING.md)、[安全](SECURITY.md)、[发布记录](https://github.com/sihuangtech/probelune/releases)。
 
 ## 星标历史
 

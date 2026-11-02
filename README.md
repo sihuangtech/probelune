@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | [probelune-dashboard](https://github.com/sihuangtech/probelune-dashboard) | Vue web console + Go backend; one deployment | 0.1.0 |
 | [probelune-node](https://github.com/sihuangtech/probelune-node) | Go probe service; Linux binary/container | 0.1.0 |
-| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron local tools and remote comparisons; original history retained | 1.6.0 |
+| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron local tools and remote comparisons; original history retained | 0.1.0 |
 | [probelune-mobile](https://github.com/sihuangtech/probelune-mobile) | Flutter Android/iOS companion | 0.1.0 |
 | [probelune-contracts](https://github.com/sihuangtech/probelune-contracts) | Versioned Go models, validation and HTTP/node protocol | 0.1.1 |
 
@@ -41,8 +41,7 @@ Read each project's README before installing its toolchain. The helper skips exi
 
 Initial validation includes real local/contained checks, browser/Electron UI, Android emulator connection, native builds and backup restoration. It does not establish real geographic coverage, production-scale SLOs, signed distribution or FCM/APNs device delivery. Screenshots show clearly labelled local fixtures.
 
-GPL-3.0-or-later. See [LICENSE](LICENSE), [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and [CHANGELOG.md](CHANGELOG.md).
-
+GPL-3.0-or-later. See [LICENSE](LICENSE), [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and [Releases](https://github.com/sihuangtech/probelune/releases).
 
 ## Star History
 

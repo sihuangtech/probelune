@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const required = ['README.md', 'README.zh-CN.md', 'PRD.md', 'LICENSE',
-  'CHANGELOG.md', 'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md', 'SECURITY.md'];
+  'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md', 'SECURITY.md'];
 for (const file of required) await access(resolve(root, file));
 
 async function markdownFiles(dir) {

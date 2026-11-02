@@ -1,8 +1,8 @@
 # Release procedure / 发布流程
 
-Each repository releases independently. Dashboard/node/mobile start at 0.1.0; desktop continues at 1.6.0; the contracts dependency is v0.1.1 and protocol remains v1. Never move an existing published tag.
+Each repository publishes a `v0.1.0` GitHub Release with English release notes. Desktop package numbering starts at `0.1.0` for the Probelune release line; the earlier `v1.6.0` tag is retained as history. Protocol remains v1. Current Go applications pin a contracts commit through a Go-generated pseudo-version to retain certificate-lifetime assertions without depending on the retired `v0.1.1` tag. Never move an existing published tag.
 
-1. Review the relevant README, changelog, security policy and lockfile changes. Check that no real `.env`, credentials, database, node identity, private targets or generated signing material are staged.
+1. Review the relevant README, GitHub Release notes, security policy and lockfile changes. Check that no real `.env`, credentials, database, node identity, private targets or generated signing material are staged.
 2. Run that repository's formatter, static checks and build. Go release builds use `GOWORK=off`. Record UI, runtime, container and device evidence separately.
 3. Verify the dashboard/node pair against the chosen contract version. For an upgrade, take and restore-test a database/key backup before replacing a deployment.
 4. Commit and push the intended branch to its own `sihuangtech` repository. Compare local HEAD to `git ls-remote origin refs/heads/BRANCH` and read CI for that exact commit.
@@ -11,4 +11,6 @@ Each repository releases independently. Dashboard/node/mobile start at 0.1.0; de
 
 The root documentation repo ignores all child source trees, `go.work` and `.runtime`. A release is not a reason to add them as submodules or flatten their histories. The desktop remote has been renamed; its existing `master` branch/history are retained. New repositories use `main`.
 
-Open-source files in each project: English-default `README.md`, `README.zh-CN.md`, LICENSE, CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, issue/PR templates and CI. Environment-specific operational and release instructions live with the project that owns them.
+Open-source files in each project: English-default `README.md`, `README.zh-CN.md`, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, issue/PR templates and CI. Environment-specific operational and release instructions live with the project that owns them.
+
+Release notes are maintained on GitHub Releases in English. `CHANGELOG*`, `Changelog*` and `changelog*` files are ignored in every repository. Existing source tags remain historical snapshots; maintenance changes are committed to each default branch. Releases may contain source archives only; attach prebuilt binaries only when explicitly built and validated for their stated platform.
