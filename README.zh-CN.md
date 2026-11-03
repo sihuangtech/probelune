@@ -6,33 +6,22 @@
 
 ![面板与两个本地验证节点](docs/images/dashboard.png)
 
-## Probelune 项目仓库
+## 了解 Probelune
 
-Probelune 由六个仓库组成，当前仓库是 **probelune**。可通过下表了解并访问其他组件。
+Probelune 让你通过网页、手机和桌面查看自己的服务状态，并从不同网络位置排查故障。
 
-自部署时从网页面板和探测节点开始，移动端与桌面端连接同一个面板，协议仓库为开发者提供共享定义。
+开始自部署时，先配置网页面板和探测节点，再按需要连接手机或桌面客户端。完整架构与部署指南可以在项目总览中找到。
 
-| 仓库 | 用途 |
+| 组件 | 用途 |
 | --- | --- |
-| [probelune](https://github.com/sihuangtech/probelune) | 项目总览、架构与部署指南 |
-| [probelune-dashboard](https://github.com/sihuangtech/probelune-dashboard) | 网页控制台与 Go API 服务端 |
-| [probelune-node](https://github.com/sihuangtech/probelune-node) | 部署在监测网络中的探测执行器 |
-| [probelune-mobile](https://github.com/sihuangtech/probelune-mobile) | Flutter Android 与 iOS 移动客户端 |
-| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron 桌面客户端与诊断工具 |
-| [probelune-contracts](https://github.com/sihuangtech/probelune-contracts) | 共享 Go 数据结构、参数校验与接口协议 |
+| [项目总览](https://github.com/sihuangtech/probelune) | 项目总览、架构与部署指南 |
+| [网页面板](https://github.com/sihuangtech/probelune-dashboard) | 网页控制台与 Go API 服务端 |
+| [探测节点](https://github.com/sihuangtech/probelune-node) | 部署在监测网络中的探测执行器 |
+| [移动客户端](https://github.com/sihuangtech/probelune-mobile) | Flutter Android 与 iOS 移动客户端 |
+| [桌面客户端](https://github.com/sihuangtech/probelune-desktop) | Electron 桌面客户端与诊断工具 |
+| [协议与数据定义](https://github.com/sihuangtech/probelune-contracts) | 共享 Go 数据结构、参数校验与接口协议 |
 
 
-## 独立项目
-
-| 仓库 | 职责 | 首版 |
-| --- | --- | --- |
-| [probelune-dashboard](https://github.com/sihuangtech/probelune-dashboard) | Vue 网页 + Go 后端，一起部署 | 0.1.1 |
-| [probelune-node](https://github.com/sihuangtech/probelune-node) | Go 探测节点，Linux 二进制/容器 | 0.1.1 |
-| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron 本地工具与远端对照，保留旧历史 | 0.1.1 |
-| [probelune-mobile](https://github.com/sihuangtech/probelune-mobile) | Flutter Android/iOS 客户端 | 0.1.1 |
-| [probelune-contracts](https://github.com/sihuangtech/probelune-contracts) | Go 数据定义、校验和接口协议 | 0.1.1 |
-
-本仓库只管理总文档与本地辅助脚本，不收录五个子项目源码、不创建 Git 子模块。各项目独立构建与发布；面板的网页和后端属于同一个仓库。
 
 ## 使用流程
 

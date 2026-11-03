@@ -6,33 +6,22 @@
 
 ![Probelune dashboard with two local validation nodes](docs/images/dashboard.png)
 
-## Probelune repositories
+## Explore Probelune
 
-Probelune consists of six repositories. This repository is **probelune**. Use the links below to find the other components.
+Probelune brings your service health to the web, phone and desktop, with probes on the networks you want to observe.
 
-For a self-hosted installation, start with the dashboard and probe node. Mobile and desktop clients connect to that dashboard. Contracts provide shared definitions for development.
+To set up Probelune, start with the dashboard and a probe node, then connect the clients you use. The project overview has the architecture and deployment guides.
 
-| Repository | Purpose |
+| Component | What it provides |
 | --- | --- |
-| [probelune](https://github.com/sihuangtech/probelune) | Product overview, architecture and deployment guides |
-| [probelune-dashboard](https://github.com/sihuangtech/probelune-dashboard) | Web dashboard and Go API server |
-| [probelune-node](https://github.com/sihuangtech/probelune-node) | Probe executor for monitored networks |
-| [probelune-mobile](https://github.com/sihuangtech/probelune-mobile) | Flutter client for Android and iOS |
-| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron desktop client and diagnostic tools |
-| [probelune-contracts](https://github.com/sihuangtech/probelune-contracts) | Shared Go models, validation and API protocols |
+| [Project overview](https://github.com/sihuangtech/probelune) | Product overview, architecture and deployment guides |
+| [Dashboard](https://github.com/sihuangtech/probelune-dashboard) | Web dashboard and Go API server |
+| [Probe node](https://github.com/sihuangtech/probelune-node) | Probe executor for monitored networks |
+| [Mobile app](https://github.com/sihuangtech/probelune-mobile) | Flutter client for Android and iOS |
+| [Desktop app](https://github.com/sihuangtech/probelune-desktop) | Electron desktop client and diagnostic tools |
+| [Contracts](https://github.com/sihuangtech/probelune-contracts) | Shared Go models, validation and API protocols |
 
 
-## Independent repositories
-
-| Repository | Responsibility | Initial release |
-| --- | --- | --- |
-| [probelune-dashboard](https://github.com/sihuangtech/probelune-dashboard) | Vue web console + Go backend; one deployment | 0.1.1 |
-| [probelune-node](https://github.com/sihuangtech/probelune-node) | Go probe service; Linux binary/container | 0.1.1 |
-| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron local tools and remote comparisons; original history retained | 0.1.1 |
-| [probelune-mobile](https://github.com/sihuangtech/probelune-mobile) | Flutter Android/iOS companion | 0.1.1 |
-| [probelune-contracts](https://github.com/sihuangtech/probelune-contracts) | Versioned Go models, validation and HTTP/node protocol | 0.1.1 |
-
-**This repository contains product documentation and local helper scripts.** It does not vendor the five projects or treat them as Git submodules. Each can be cloned, built and published independently. The dashboard's frontend and backend intentionally stay in the same repository.
 
 ## Start using Probelune
 
