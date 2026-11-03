@@ -3,8 +3,8 @@ set -eu
 cd "$(dirname "$0")/.."
 # 独立构建，防止本地 go.work 掩盖缺失的远程依赖。
 (cd probelune-contracts && GOWORK=off go vet ./... && GOWORK=off go test ./...)
-(cd probelune-node && GOWORK=off go vet ./... && GOWORK=off go build ./...)
-(cd probelune-dashboard/server && GOWORK=off go vet ./... && GOWORK=off go build ./...)
+(cd probelune-node && . ./scripts/go-env.sh && GOWORK=off go vet ./... && GOWORK=off go build ./...)
+(cd probelune-dashboard && . ./scripts/go-env.sh && cd server && GOWORK=off go vet ./... && GOWORK=off go build ./...)
 (cd probelune-dashboard/web && npm ci && npm run lint && npm run build)
 (cd probelune-desktop && npm ci && npm run build)
 (cd probelune-mobile && flutter pub get && flutter analyze && flutter build apk --debug)
