@@ -10,17 +10,17 @@
 
 | 仓库 | 职责 | 首版 |
 | --- | --- | --- |
-| [probelune-dashboard](https://github.com/sihuangtech/probelune-dashboard) | Vue 网页 + Go 后端，一起部署 | 0.1.0 |
-| [probelune-node](https://github.com/sihuangtech/probelune-node) | Go 探测节点，Linux 二进制/容器 | 0.1.0 |
-| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron 本地工具与远端对照，保留旧历史 | 0.1.0 |
-| [probelune-mobile](https://github.com/sihuangtech/probelune-mobile) | Flutter Android/iOS 客户端 | 0.1.0 |
+| [probelune-dashboard](https://github.com/sihuangtech/probelune-dashboard) | Vue 网页 + Go 后端，一起部署 | 0.1.1 |
+| [probelune-node](https://github.com/sihuangtech/probelune-node) | Go 探测节点，Linux 二进制/容器 | 0.1.1 |
+| [probelune-desktop](https://github.com/sihuangtech/probelune-desktop) | Electron 本地工具与远端对照，保留旧历史 | 0.1.1 |
+| [probelune-mobile](https://github.com/sihuangtech/probelune-mobile) | Flutter Android/iOS 客户端 | 0.1.1 |
 | [probelune-contracts](https://github.com/sihuangtech/probelune-contracts) | Go 数据定义、校验和接口协议 | 0.1.1 |
 
 本仓库只管理总文档与本地辅助脚本，不收录五个子项目源码、不创建 Git 子模块。各项目独立构建与发布；面板的网页和后端属于同一个仓库。
 
 ## 使用流程
 
-面板支持 [源码部署](https://github.com/sihuangtech/probelune-dashboard#source-deployment) 和 [Docker Compose](https://github.com/sihuangtech/probelune-dashboard#quick-start-docker-compose)。启动后添加并部署 [探测节点](https://github.com/sihuangtech/probelune-node)，配置 HTTP/HTTPS、TCP、ICMP、DNS 监测和通知，再连接桌面或移动客户端。复杂配置在网页完成，手机用于查看和处置，桌面保留离线本地工具。
+面板支持 [源码部署](https://github.com/sihuangtech/probelune-dashboard#source-deployment) 和 [Docker Compose](https://github.com/sihuangtech/probelune-dashboard#quick-start-docker-compose)。启动后添加并部署 [探测节点](https://github.com/sihuangtech/probelune-node)，配置 HTTP/HTTPS、TCP、UDP、ICMP、DNS 监测和通知，再连接桌面或移动客户端。复杂配置在网页完成，手机用于查看和处置，桌面保留离线本地工具。
 
 节点离线代表覆盖不足，不等于目标宕机；失败与恢复按连续阈值确认。重复结果幂等，迟到结果只进入历史。HTTPS 默认验证证书，私网监测需要显式 CIDR 许可。原生推送可选，使用部署者自己的 Firebase/APNs。
 

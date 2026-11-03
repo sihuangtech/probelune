@@ -55,3 +55,14 @@ Maintenance validation later on 2026-10-28 used Node.js 26.12.1, npm 12.2.1, Go 
 - The PRD's 100 monitors × 5 nodes and latency/SLO budgets remain benchmark targets. No production load or uptime guarantee is inferred from local builds.
 
 These are concrete deployment/release gates, not missing secret placeholders hidden as successful checks. See each repository's release and operational instructions. GitHub CI results should be read at the pushed revision; they do not replace the device/provider gates above.
+
+## Deployment improvement validation — 2026-11-03
+
+- Added protocol validation and real loopback UDP response, assertion, no-response and cancellation tests. Contracts, probe and dashboard tests pass with the race detector. Dashboard API tests cover archived/raw availability aggregation, missing coverage, configurable resolution, public redaction, diagnostic run isolation, cancellation, viewer denial and history pagination.
+- A clean, isolated local dashboard registered a real native probe. HTTP and UDP checks ran every 15 seconds; a controlled HTTP 503 fixture produced an independently visible failure. An immediate UDP recheck returned a real response in its own diagnostic run.
+- Real Chromium interactions verified 15-minute, hourly and 35-minute custom availability cells, incident detail dialogs, authenticated monitor history, run-specific rechecks, and a 390-pixel viewport without page-level horizontal overflow. Old time windows remain grey on a newly created instance. These controlled fixtures do not establish geographic availability or production load.
+- Web lint, type checking and production compilation pass. Linux cross-build and release artifact evidence are recorded in GitHub Releases; mobile/desktop validation is recorded separately below when completed.
+
+The deployment artifacts use application version `v0.1.1`. The previous `v0.1.0` source snapshots are preserved. The Linux ARM64 probe was also executed inside a container without raw-network capabilities and received a real UDP response from the controlled fixture. The dashboard Docker image built successfully. Production-only web dependency audit reported zero advisories at this validation time.
+
+Mobile static analysis passed; desktop transport tests exercised TCP, binary UDP assertions and no-response behavior against real loopback sockets. Desktop and mobile use the same batch and availability APIs. Signed installers, physical-device push and production load remain separate validation boundaries.

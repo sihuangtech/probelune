@@ -7,7 +7,7 @@ flowchart LR
   Mobile[Flutter mobile] --> API
   Desktop --> Local[Local diagnostic adapters]
   Nodes[Go probe nodes] -->|outbound poll and upload| API
-  Nodes --> Targets[HTTP TCP ICMP DNS targets]
+  Nodes --> Targets[HTTP TCP UDP ICMP DNS targets]
   API --> DB[SQLite and encrypted records]
   API --> Notify[SMTP Webhook optional FCM]
   Contracts[Versioned contracts] -.-> API
@@ -28,6 +28,6 @@ SQLite stores raw samples and time buckets, with sensitive configuration encrypt
 
 `probelune-dashboard`, `probelune-node`, `probelune-desktop`, `probelune-mobile` and `probelune-contracts` each have their own Git history, CI, license, GitHub Release notes and bilingual README. The root `probelune` repository is documentation only. Root ignore rules exclude child projects and local runtime fixtures; no submodules are used.
 
-All repositories and Go dependencies use `v0.1.0`, including certificate-lifetime assertions. The maintainer explicitly republished this tag with the current implementation. Release notes are maintained on GitHub; local changelogs are removed and ignored.
+The contracts module defines check types, schedule models and capability requirements. Nodes use one executor registry for dispatch and capability advertisement; TCP and UDP share policy-checked transport lifecycle handling. Web features are grouped by checks, monitoring, historical visualization and settings, with page composition kept in route views.
 
 Detailed implementation lives in each repository: [dashboard](https://github.com/sihuangtech/probelune-dashboard/blob/main/docs/ARCHITECTURE.md), [node](https://github.com/sihuangtech/probelune-node), [desktop](https://github.com/sihuangtech/probelune-desktop/blob/master/docs/PROBELUNE.md), [mobile](https://github.com/sihuangtech/probelune-mobile), [contracts](https://github.com/sihuangtech/probelune-contracts/tree/main/docs).

@@ -1,6 +1,6 @@
 # Release procedure / 发布流程
 
-All repositories and Go dependencies use `v0.1.0`, including certificate-lifetime assertions. The maintainer explicitly republished this tag with the current implementation. Release notes are maintained on GitHub; local changelogs are removed and ignored.
+The current release is `v0.1.1`; `v0.1.0` retains the previous source snapshots. Each repository publishes English release notes on GitHub. Protocol v1 remains compatible across these application versions.
 
 1. Review the relevant README, GitHub Release notes, security policy and lockfile changes. Check that no real `.env`, credentials, database, node identity, private targets or generated signing material are staged.
 2. Run that repository's formatter, static checks and build. Go release builds use `GOWORK=off`. Record UI, runtime, container and device evidence separately.
@@ -13,4 +13,4 @@ The root documentation repo ignores all child source trees, `go.work` and `.runt
 
 Open-source files in each project: English-default `README.md`, `README.zh-CN.md`, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, issue/PR templates and CI. Environment-specific operational and release instructions live with the project that owns them.
 
-Release notes are maintained on GitHub Releases in English. `CHANGELOG*`, `Changelog*` and `changelog*` files are ignored in every repository. The v0.1.0 tags were updated to the consolidated release commits at the maintainer's request. Releases may contain source archives only; attach prebuilt binaries only when explicitly built and validated for their stated platform.
+Release notes are maintained on GitHub Releases in English. `CHANGELOG*`, `Changelog*` and `changelog*` files are ignored in every repository. Publish subsequent changes under a new version and keep previous tags intact. Releases may contain source archives only; attach prebuilt binaries only when explicitly built and validated for their stated platform.
